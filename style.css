@@ -1,0 +1,60 @@
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+    font-family:Brush Script MT;
+
+}
+header, footer{
+min-height: 15vh;
+background-color: #525252;
+}
+main{
+display: grid;
+grid-template-columns: 1fr 6fr 4fr 1fr;
+grid-template-areas: ".hero form.";
+min-height: 70vh;
+background-color:rgba(63, 255, 56, 0.897);
+background-image:
+radial-gradient(at 40% 20%, rgb(164, 122, 206) 0px, transparent 50%),
+radial-gradient(at 80% 0%, rgb(255, 164, 214)px, transparent 50%),
+radial-gradient(at 0% 50%, rgb(98, 105, 243) 0px, transparent 50%),
+radial-gradient(at 80% 50%, rgb(236, 137, 137) 0px, transparent 50%);
+}
+#hero{
+    grid-area: hero;
+    display:grid;
+    justify-content: left;
+    align-content: center;
+    color:white;
+
+}
+
+#hero > h1{
+    font-size: 4vw;
+}
+#login{
+    grid-area: form;
+    background-color: white;
+    box-shadow: 10px 0 10px rgba(0, 0, 0, 0.2), -10px 0 10px rgba(0, 0, 0, 0.2);
+}
+
+input[type=text], input[type=date], input[type=email], input[type=datetime] button{
+    display:block;
+    margin: 12px;
+    width:calc(100% - 24px);
+    height:24px;
+    padding: 12px;
+}
+
+.success{
+    color:rgb(255, 72, 16);
+    font-size: 3vw;
+    width:80%;
+    padding:12px;
+    margin:0 auto;
+    aspect-ratio: 1/1;
+}
+.hide{
+    display: none;
+}
